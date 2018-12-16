@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456FE9D1BB0940BB7E889D27 /* Pods_LottieInVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA835062A34378171B70D7C /* Pods_LottieInVideo.framework */; };
 		E611F60321C4F8AF00B4FAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E611F60221C4F8AF00B4FAA0 /* AppDelegate.swift */; };
 		E611F60521C4F8AF00B4FAA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E611F60421C4F8AF00B4FAA0 /* ViewController.swift */; };
 		E611F60821C4F8AF00B4FAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E611F60621C4F8AF00B4FAA0 /* Main.storyboard */; };
 		E611F60A21C4F8B000B4FAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E611F60921C4F8B000B4FAA0 /* Assets.xcassets */; };
 		E611F60D21C4F8B000B4FAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E611F60B21C4F8B000B4FAA0 /* LaunchScreen.storyboard */; };
+		E6517BA021D099BA00F670A3 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = E6517B9F21D099BA00F670A3 /* drinks.json */; };
+		E69CE85D21C50811006B13E8 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85C21C50811006B13E8 /* Sticker.swift */; };
+		E69CE86021C50840006B13E8 /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85E21C50840006B13E8 /* StickerView.swift */; };
+		E69CE86121C50840006B13E8 /* StickerWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85F21C50840006B13E8 /* StickerWrapView.swift */; };
+		E69CE86321C509D4006B13E8 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE86221C509D4006B13E8 /* Util.swift */; };
+		E69D369D21C63268003C80D2 /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D369C21C63268003C80D2 /* VideoPreview.swift */; };
+		E69D369F21C63392003C80D2 /* ResizableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D369E21C63392003C80D2 /* ResizableSlider.swift */; };
+		E69D36A121C63C0D003C80D2 /* UIView+Positioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D36A021C63C0D003C80D2 /* UIView+Positioning.swift */; };
+		E69D36A821C64344003C80D2 /* 1532072337.63853.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = E69D36A621C64344003C80D2 /* 1532072337.63853.MP4 */; };
+		E69D36AC21C64355003C80D2 /* PinJump.json in Resources */ = {isa = PBXBuildFile; fileRef = E69D36AB21C64355003C80D2 /* PinJump.json */; };
+		E69D36B021C65374003C80D2 /* WelcomeToIsland.json in Resources */ = {isa = PBXBuildFile; fileRef = E69D36AF21C65374003C80D2 /* WelcomeToIsland.json */; };
+		E69D36B221C65378003C80D2 /* HamburgerArrow.json in Resources */ = {isa = PBXBuildFile; fileRef = E69D36B121C65378003C80D2 /* HamburgerArrow.json */; };
+		E69D36B621C65596003C80D2 /* hunluan.json in Resources */ = {isa = PBXBuildFile; fileRef = E69D36B521C65596003C80D2 /* hunluan.json */; };
+		E69D36B821C65620003C80D2 /* xingxing.json in Resources */ = {isa = PBXBuildFile; fileRef = E69D36B721C65620003C80D2 /* xingxing.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48A383B9FB37A398635568D2 /* Pods-LottieInVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieInVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo.release.xcconfig"; sourceTree = "<group>"; };
+		8E1DF4586636AF0E4A2FD818 /* Pods-LottieInVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieInVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		E611F5FF21C4F8AF00B4FAA0 /* LottieInVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieInVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E611F60221C4F8AF00B4FAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E611F60421C4F8AF00B4FAA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,21 @@
 		E611F60921C4F8B000B4FAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E611F60C21C4F8B000B4FAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E611F60E21C4F8B000B4FAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6517B9F21D099BA00F670A3 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		E69CE85C21C50811006B13E8 /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		E69CE85E21C50840006B13E8 /* StickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
+		E69CE85F21C50840006B13E8 /* StickerWrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerWrapView.swift; sourceTree = "<group>"; };
+		E69CE86221C509D4006B13E8 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E69D369C21C63268003C80D2 /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
+		E69D369E21C63392003C80D2 /* ResizableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableSlider.swift; sourceTree = "<group>"; };
+		E69D36A021C63C0D003C80D2 /* UIView+Positioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Positioning.swift"; sourceTree = "<group>"; };
+		E69D36A621C64344003C80D2 /* 1532072337.63853.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1532072337.63853.MP4; sourceTree = "<group>"; };
+		E69D36AB21C64355003C80D2 /* PinJump.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PinJump.json; sourceTree = "<group>"; };
+		E69D36AF21C65374003C80D2 /* WelcomeToIsland.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WelcomeToIsland.json; sourceTree = "<group>"; };
+		E69D36B121C65378003C80D2 /* HamburgerArrow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HamburgerArrow.json; sourceTree = "<group>"; };
+		E69D36B521C65596003C80D2 /* hunluan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hunluan.json; sourceTree = "<group>"; };
+		E69D36B721C65620003C80D2 /* xingxing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = xingxing.json; sourceTree = "<group>"; };
+		ECA835062A34378171B70D7C /* Pods_LottieInVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieInVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456FE9D1BB0940BB7E889D27 /* Pods_LottieInVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D04DABA761D01A40873AC4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DF4586636AF0E4A2FD818 /* Pods-LottieInVideo.debug.xcconfig */,
+				48A383B9FB37A398635568D2 /* Pods-LottieInVideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9586BEB2E8F8C766E72D91AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECA835062A34378171B70D7C /* Pods_LottieInVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E611F5F621C4F8AF00B4FAA0 = {
 			isa = PBXGroup;
 			children = (
 				E611F60121C4F8AF00B4FAA0 /* LottieInVideo */,
 				E611F60021C4F8AF00B4FAA0 /* Products */,
+				2D04DABA761D01A40873AC4F /* Pods */,
+				9586BEB2E8F8C766E72D91AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +106,8 @@
 		E611F60121C4F8AF00B4FAA0 /* LottieInVideo */ = {
 			isa = PBXGroup;
 			children = (
+				E69D36A421C64328003C80D2 /* Resource */,
+				E69CE85821C50801006B13E8 /* Classes */,
 				E611F60221C4F8AF00B4FAA0 /* AppDelegate.swift */,
 				E611F60421C4F8AF00B4FAA0 /* ViewController.swift */,
 				E611F60621C4F8AF00B4FAA0 /* Main.storyboard */,
@@ -64,6 +118,58 @@
 			path = LottieInVideo;
 			sourceTree = "<group>";
 		};
+		E69CE85821C50801006B13E8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E69D36A021C63C0D003C80D2 /* UIView+Positioning.swift */,
+				E69CE85921C50801006B13E8 /* Sticker */,
+				E69CE86221C509D4006B13E8 /* Util.swift */,
+				E69D369C21C63268003C80D2 /* VideoPreview.swift */,
+				E69D369E21C63392003C80D2 /* ResizableSlider.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E69CE85921C50801006B13E8 /* Sticker */ = {
+			isa = PBXGroup;
+			children = (
+				E69CE85A21C50801006B13E8 /* Model */,
+				E69CE85B21C50801006B13E8 /* View */,
+			);
+			path = Sticker;
+			sourceTree = "<group>";
+		};
+		E69CE85A21C50801006B13E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E69CE85C21C50811006B13E8 /* Sticker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E69CE85B21C50801006B13E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E69CE85E21C50840006B13E8 /* StickerView.swift */,
+				E69CE85F21C50840006B13E8 /* StickerWrapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E69D36A421C64328003C80D2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E6517B9F21D099BA00F670A3 /* drinks.json */,
+				E69D36B721C65620003C80D2 /* xingxing.json */,
+				E69D36B521C65596003C80D2 /* hunluan.json */,
+				E69D36B121C65378003C80D2 /* HamburgerArrow.json */,
+				E69D36AF21C65374003C80D2 /* WelcomeToIsland.json */,
+				E69D36AB21C64355003C80D2 /* PinJump.json */,
+				E69D36A621C64344003C80D2 /* 1532072337.63853.MP4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E611F61121C4F8B000B4FAA0 /* Build configuration list for PBXNativeTarget "LottieInVideo" */;
 			buildPhases = (
+				A83FBC3423F670680EF54204 /* [CP] Check Pods Manifest.lock */,
 				E611F5FB21C4F8AF00B4FAA0 /* Sources */,
 				E611F5FC21C4F8AF00B4FAA0 /* Frameworks */,
 				E611F5FD21C4F8AF00B4FAA0 /* Resources */,
+				3C969EF0956B2AE8B49CFF72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,20 +230,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69D36AC21C64355003C80D2 /* PinJump.json in Resources */,
 				E611F60D21C4F8B000B4FAA0 /* LaunchScreen.storyboard in Resources */,
+				E69D36B221C65378003C80D2 /* HamburgerArrow.json in Resources */,
+				E69D36B021C65374003C80D2 /* WelcomeToIsland.json in Resources */,
+				E69D36B621C65596003C80D2 /* hunluan.json in Resources */,
 				E611F60A21C4F8B000B4FAA0 /* Assets.xcassets in Resources */,
+				E6517BA021D099BA00F670A3 /* drinks.json in Resources */,
+				E69D36B821C65620003C80D2 /* xingxing.json in Resources */,
+				E69D36A821C64344003C80D2 /* 1532072337.63853.MP4 in Resources */,
 				E611F60821C4F8AF00B4FAA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C969EF0956B2AE8B49CFF72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVPlayerSeeker/AVPlayerSeeker.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCRecorder/SCRecorder.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVPlayerSeeker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCRecorder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A83FBC3423F670680EF54204 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottieInVideo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E611F5FB21C4F8AF00B4FAA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69CE86021C50840006B13E8 /* StickerView.swift in Sources */,
+				E69CE86321C509D4006B13E8 /* Util.swift in Sources */,
+				E69D36A121C63C0D003C80D2 /* UIView+Positioning.swift in Sources */,
 				E611F60521C4F8AF00B4FAA0 /* ViewController.swift in Sources */,
+				E69CE85D21C50811006B13E8 /* Sticker.swift in Sources */,
+				E69D369F21C63392003C80D2 /* ResizableSlider.swift in Sources */,
+				E69CE86121C50840006B13E8 /* StickerWrapView.swift in Sources */,
+				E69D369D21C63268003C80D2 /* VideoPreview.swift in Sources */,
 				E611F60321C4F8AF00B4FAA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +463,7 @@
 		};
 		E611F61221C4F8B000B4FAA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1DF4586636AF0E4A2FD818 /* Pods-LottieInVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +482,7 @@
 		};
 		E611F61321C4F8B000B4FAA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A383B9FB37A398635568D2 /* Pods-LottieInVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

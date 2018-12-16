@@ -1,0 +1,60 @@
+PODS:
+  - AVPlayerSeeker (1.1)
+  - lottie-ios (1.0.4)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SCRecorder (2.7.0)
+  - SnapKit (4.2.0)
+  - UIColor_Hex_Swift (4.2.0)
+
+DEPENDENCIES:
+  - AVPlayerSeeker (from `https://github.com/lvpengwei/AVPlayerSeeker.git`, commit `31381b0249d0d9a3dbae3a2c893fb132561547e7`)
+  - lottie-ios (from `/Users/lvpengwei/Documents/project/xiaodao/iOS/lottie-ios`)
+  - RxCocoa (~> 4.4.0)
+  - SCRecorder (from `https://github.com/lvpengwei/SCRecorder.git`, commit `f507fcc38228e14d1c2d970f559548742cbf13a6`)
+  - SnapKit (~> 4.2.0)
+  - UIColor_Hex_Swift (~> 4.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - UIColor_Hex_Swift
+
+EXTERNAL SOURCES:
+  AVPlayerSeeker:
+    :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
+    :git: https://github.com/lvpengwei/AVPlayerSeeker.git
+  lottie-ios:
+    :commit: af6fddb1c50b57ed8e4d99bd847a07c928bebf95
+    :path: "/Users/lvpengwei/Documents/project/xiaodao/iOS/lottie-ios"
+  SCRecorder:
+    :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
+    :git: https://github.com/lvpengwei/SCRecorder.git
+
+CHECKOUT OPTIONS:
+  AVPlayerSeeker:
+    :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
+    :git: https://github.com/lvpengwei/AVPlayerSeeker.git
+  SCRecorder:
+    :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
+    :git: https://github.com/lvpengwei/SCRecorder.git
+
+SPEC CHECKSUMS:
+  AVPlayerSeeker: 97a9f1d66c8c46d5889936033b3e88de06d45c54
+  lottie-ios: 41c1b35410d5d72ce7453864f4792861125e52e7
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
+
+PODFILE CHECKSUM: 064ecd8b4f47d434ea757afd5ee4fbad8d6f641a
+
+COCOAPODS: 1.5.3
