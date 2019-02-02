@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Lottie
 
 class Sticker {
     var url = ""

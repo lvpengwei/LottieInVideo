@@ -14,6 +14,8 @@
 		E611F60A21C4F8B000B4FAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E611F60921C4F8B000B4FAA0 /* Assets.xcassets */; };
 		E611F60D21C4F8B000B4FAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E611F60B21C4F8B000B4FAA0 /* LaunchScreen.storyboard */; };
 		E6517BA021D099BA00F670A3 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = E6517B9F21D099BA00F670A3 /* drinks.json */; };
+		E664EBC721F878F4007123FE /* CustomVideoCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664EBC521F878F4007123FE /* CustomVideoCompositor.swift */; };
+		E664EBC821F878F4007123FE /* CustomLayerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664EBC621F878F4007123FE /* CustomLayerInstruction.swift */; };
 		E69CE85D21C50811006B13E8 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85C21C50811006B13E8 /* Sticker.swift */; };
 		E69CE86021C50840006B13E8 /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85E21C50840006B13E8 /* StickerView.swift */; };
 		E69CE86121C50840006B13E8 /* StickerWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CE85F21C50840006B13E8 /* StickerWrapView.swift */; };
@@ -40,6 +42,8 @@
 		E611F60C21C4F8B000B4FAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E611F60E21C4F8B000B4FAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6517B9F21D099BA00F670A3 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		E664EBC521F878F4007123FE /* CustomVideoCompositor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoCompositor.swift; sourceTree = "<group>"; };
+		E664EBC621F878F4007123FE /* CustomLayerInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayerInstruction.swift; sourceTree = "<group>"; };
 		E69CE85C21C50811006B13E8 /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		E69CE85E21C50840006B13E8 /* StickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
 		E69CE85F21C50840006B13E8 /* StickerWrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerWrapView.swift; sourceTree = "<group>"; };
@@ -118,9 +122,19 @@
 			path = LottieInVideo;
 			sourceTree = "<group>";
 		};
+		E664EBC421F878ED007123FE /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				E664EBC621F878F4007123FE /* CustomLayerInstruction.swift */,
+				E664EBC521F878F4007123FE /* CustomVideoCompositor.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		E69CE85821C50801006B13E8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E664EBC421F878ED007123FE /* Editor */,
 				E69D36A021C63C0D003C80D2 /* UIView+Positioning.swift */,
 				E69CE85921C50801006B13E8 /* Sticker */,
 				E69CE86221C509D4006B13E8 /* Util.swift */,
@@ -315,7 +329,9 @@
 				E69CE86321C509D4006B13E8 /* Util.swift in Sources */,
 				E69D36A121C63C0D003C80D2 /* UIView+Positioning.swift in Sources */,
 				E611F60521C4F8AF00B4FAA0 /* ViewController.swift in Sources */,
+				E664EBC821F878F4007123FE /* CustomLayerInstruction.swift in Sources */,
 				E69CE85D21C50811006B13E8 /* Sticker.swift in Sources */,
+				E664EBC721F878F4007123FE /* CustomVideoCompositor.swift in Sources */,
 				E69D369F21C63392003C80D2 /* ResizableSlider.swift in Sources */,
 				E69CE86121C50840006B13E8 /* StickerWrapView.swift in Sources */,
 				E69D369D21C63268003C80D2 /* VideoPreview.swift in Sources */,

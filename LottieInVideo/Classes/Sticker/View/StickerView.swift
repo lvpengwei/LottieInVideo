@@ -185,7 +185,7 @@ class StickerView: StickerWrapView, UIGestureRecognizerDelegate {
         } catch let e {
             print(e)
         }
-        let animationLayer = LOTAnimationLayer.animation(fromJSON: stickerJSON, customData: [], loop: false)!
+        let animationLayer = CALayer.animation(fromJSON: stickerJSON, loop: false)
         let stickerLayer = StickerLayer.init(animationLayer: animationLayer)
         
         super.init(stickerLayer: stickerLayer)
@@ -254,8 +254,8 @@ class StickerView: StickerWrapView, UIGestureRecognizerDelegate {
 }
 
 class StickerLayer: AVSynchronizedLayer {
-    var animationLayer: LOTAnimationLayer
-    init(animationLayer: LOTAnimationLayer) {
+    var animationLayer: CALayer
+    init(animationLayer: CALayer) {
         self.animationLayer = animationLayer
         super.init()
         addSublayer(animationLayer)

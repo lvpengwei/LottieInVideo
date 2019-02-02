@@ -97,37 +97,27 @@ class ViewController: UIViewController {
         let videoComposition = AVMutableVideoComposition()
         videoComposition.renderSize = renderSize
         videoComposition.frameDuration = CMTimeMake(value: 20, timescale: 600)
+        videoComposition.customVideoCompositorClass = CustomVideoCompositor.classForCoder() as? AVVideoCompositing.Type
         
-        let layerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: videoTrack)
+        let layerInstruction = CustomLayerInstruction(assetTrack: videoTrack)
         layerInstruction.setOpacityRamp(fromStartOpacity: 1.0, toEndOpacity: 1.0, timeRange: CMTimeRangeMake(start: .zero, duration: asset.duration))
-        
+        if let layer = createStickerLayer(in: renderSize) {
+            layerInstruction.overlayStore.setItem(layer, timeRange: CMTimeRangeMake(start: .zero, duration: asset.duration))
+        }
         let instruction = AVMutableVideoCompositionInstruction()
         instruction.timeRange = CMTimeRange(start: CMTime.zero, duration: asset.duration)
         instruction.layerInstructions = [layerInstruction]
         videoComposition.instructions = [instruction]
-        if let animationLayer = createStickerLayer(in: renderSize) {
-            let parentLayer = CALayer()
-            let videoLayer = CALayer()
-            let contentLayer = CALayer()
-            parentLayer.frame = CGRect(x: 0, y: 0, width: renderSize.width, height: renderSize.height)
-            videoLayer.frame = CGRect(x: 0, y: 0, width: renderSize.width, height: renderSize.height)
-            contentLayer.frame = CGRect(x: 0, y: 0, width: renderSize.width, height: renderSize.height)
-            contentLayer.addSublayer(animationLayer)
-            contentLayer.isGeometryFlipped = true
-            parentLayer.addSublayer(videoLayer)
-            parentLayer.addSublayer(contentLayer)
-            videoComposition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, in: parentLayer)
-        }
         return videoComposition
     }
-    private func createStickerLayer(in size: CGSize) -> CALayer? {
+    private func createStickerLayer(in size: CGSize) -> StickerContainerLayer? {
         guard let sticker = sticker else { return nil }
-        let layer = CALayer()
+        let layer = StickerContainerLayer()
         layer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         do {
             let animationData = try Data(contentsOf: URL(fileURLWithPath: sticker.url))
             if let animationJSON = try JSONSerialization.jsonObject(with: animationData, options: JSONSerialization.ReadingOptions(rawValue: UInt(0))) as? Dictionary<String, Any> {
-                let animationLayer = LOTAnimationLayer.animation(fromJSON: animationJSON, customData: [], loop: false)!
+                let animationLayer = CALayer.animation(fromJSON: animationJSON, loop: false)
                 animationLayer.bounds = sticker.bounds(containerBounds: layer.bounds)
                 animationLayer.position = sticker.center(containerBounds: layer.bounds)
                 animationLayer.setAffineTransform(sticker.transform)
@@ -146,5 +136,33 @@ class ViewController: UIViewController {
 extension ViewController: SCAssetExportSessionDelegate {
     func assetExportSessionDidProgress(_ assetExportSession: SCAssetExportSession) {
         print("progress: \(assetExportSession.progress)")
+    }
+}
+
+class StickerContainerLayer: CALayer { }
+extension StickerContainerLayer: ImageProvider {
+    public func image(at time: CMTime, renderSize: CGSize, presentationTimeRange: CMTimeRange) -> CIImage? {
+        guard let sublayers = sublayers else { return nil }
+        for sublayer in sublayers {
+            let beginTime = CMTime(seconds: sublayer.beginTime, preferredTimescale: 600)
+            let duration = CMTime(seconds: sublayer.duration, preferredTimescale: 600)
+            let timeRange = CMTimeRange(start: beginTime, duration: duration)
+            if (timeRange.containsTime(time)) {
+                sublayer.isHidden = false
+                let progress = (time - beginTime).seconds / duration.seconds
+                sublayer.display(withProgress: CGFloat(progress))
+            } else {
+                sublayer.isHidden = true
+            }
+        }
+        let size = bounds.size
+        let w = Int(size.width)
+        let h = Int(size.height)
+        guard let context = CGContext(data: nil, width: w, height: h, bitsPerComponent: 8, bytesPerRow: 4 * w, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue) else { return nil }
+        render(in: context)
+        guard let snapshot = context.makeImage() else { return nil }
+        var result = CIImage(cgImage: snapshot)
+        result = result.transformed(by: CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: result.extent.origin.y * 2 + result.extent.height))
+        return result
     }
 }
