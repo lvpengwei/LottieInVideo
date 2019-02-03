@@ -125,9 +125,12 @@ class ViewController: UIViewController {
             let animationData = try Data(contentsOf: URL(fileURLWithPath: sticker.url))
             if let animationJSON = try JSONSerialization.jsonObject(with: animationData, options: JSONSerialization.ReadingOptions(rawValue: UInt(0))) as? Dictionary<String, Any> {
                 let animationLayer = CALayer.animation(fromJSON: animationJSON, loop: false)
-                animationLayer.bounds = sticker.bounds(containerBounds: layer.bounds)
+                let bounds = sticker.bounds(containerBounds: layer.bounds)
+                let scale = bounds.width / animationLayer.bounds.width
+                var transform = CGAffineTransform.init(scaleX: scale, y: scale)
+                transform = sticker.transform.concatenating(transform)
+                animationLayer.setAffineTransform(transform)
                 animationLayer.position = sticker.center(containerBounds: layer.bounds)
-                animationLayer.setAffineTransform(sticker.transform)
                 animationLayer.beginTime = sticker.range.start.seconds
                 animationLayer.duration = sticker.range.duration.seconds
                 animationLayer.speed = sticker.speed
@@ -160,7 +163,9 @@ extension StickerContainerLayer: ImageProvider {
             if (timeRange.containsTime(time)) {
                 sublayer.isHidden = false
                 let progress = (time - beginTime).seconds / duration.seconds
-                sublayer.display(withProgress: CGFloat(progress))
+                if let sublayer = sublayer as? LOTAnimationLayer {
+                    sublayer.display(withProgress: CGFloat(progress))
+                }
             } else {
                 sublayer.isHidden = true
             }

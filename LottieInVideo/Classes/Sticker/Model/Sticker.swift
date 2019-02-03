@@ -16,12 +16,14 @@ class Sticker {
     var centerX: CGFloat = 50
     var centerY: CGFloat = 50
     var width: CGFloat = 100
-    var transform: CGAffineTransform = .identity// 宽高比
-    var aspectRatio: CGFloat = 100 {
-        didSet {
-            if aspectRatio == 0 || aspectRatio == CGFloat.nan {
-                aspectRatio = 100
+    var transform: CGAffineTransform = .identity
+    var compSize: CGSize = .zero
+    var aspectRatio: CGFloat { // 宽高比
+        get {
+            if compSize == .zero {
+                return 100
             }
+            return (compSize.width / compSize.height) * 100
         }
     }
     @objc dynamic var range: CMTimeRange = CMTimeRange.zero

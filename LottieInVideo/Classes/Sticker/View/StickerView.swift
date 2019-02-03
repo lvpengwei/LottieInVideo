@@ -186,6 +186,7 @@ class StickerView: StickerWrapView, UIGestureRecognizerDelegate {
             print(e)
         }
         let animationLayer = CALayer.animation(fromJSON: stickerJSON, loop: false)
+        sticker.compSize = animationLayer.compSize()
         let stickerLayer = StickerLayer.init(animationLayer: animationLayer)
         
         super.init(stickerLayer: stickerLayer)
@@ -264,7 +265,8 @@ class StickerLayer: AVSynchronizedLayer {
         didSet {
             CATransaction.begin()
             CATransaction.setDisableActions(true)
-            animationLayer.bounds = bounds
+            let scale = bounds.width / animationLayer.bounds.width
+            animationLayer.setAffineTransform(CGAffineTransform.init(scaleX: scale, y: scale))
             animationLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
             CATransaction.commit()
         }

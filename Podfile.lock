@@ -12,7 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AVPlayerSeeker (from `https://github.com/lvpengwei/AVPlayerSeeker.git`, commit `31381b0249d0d9a3dbae3a2c893fb132561547e7`)
-  - lottie-ios (from `https://github.com/lvpengwei/lottie-ios.git`, commit `382dc16e78cbe345585c58b284078aefd39624c8`)
+  - lottie-ios (from `https://github.com/lvpengwei/lottie-ios.git`, commit `7fc43f46635767fc6840c215313f08e7481ccb7f`)
   - RxCocoa (~> 4.4.0)
   - SCRecorder (from `https://github.com/lvpengwei/SCRecorder.git`, commit `f507fcc38228e14d1c2d970f559548742cbf13a6`)
   - SnapKit (~> 4.2.0)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
     :git: https://github.com/lvpengwei/AVPlayerSeeker.git
   lottie-ios:
-    :commit: 382dc16e78cbe345585c58b284078aefd39624c8
+    :commit: 7fc43f46635767fc6840c215313f08e7481ccb7f
     :git: https://github.com/lvpengwei/lottie-ios.git
   SCRecorder:
     :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
@@ -42,7 +42,7 @@ CHECKOUT OPTIONS:
     :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
     :git: https://github.com/lvpengwei/AVPlayerSeeker.git
   lottie-ios:
-    :commit: 382dc16e78cbe345585c58b284078aefd39624c8
+    :commit: 7fc43f46635767fc6840c215313f08e7481ccb7f
     :git: https://github.com/lvpengwei/lottie-ios.git
   SCRecorder:
     :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
@@ -58,6 +58,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
 
-PODFILE CHECKSUM: 9f353b52ad4616b4d5a583cdfd3f2458e6646d9c
+PODFILE CHECKSUM: 0290a1d636e7f14836e1263277bb13aa2b49ff93
 
 COCOAPODS: 1.5.3
