@@ -39,9 +39,16 @@
                                     <action selector="exportAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAs-Ns-Y1Q"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sk8-p8-7Rl">
+                                <rect key="frame" x="182.5" y="250" width="10.5" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Sk8-p8-7Rl" firstAttribute="centerY" secondItem="FgX-dI-Ktx" secondAttribute="centerY" id="4F8-if-0iW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PDe-tY-XBu" secondAttribute="trailing" constant="16" id="4Pj-va-2Bt"/>
                             <constraint firstItem="yH9-jB-e8C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AdR-lP-JuG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yH9-jB-e8C" secondAttribute="trailing" id="Aht-dh-aoO"/>
@@ -49,10 +56,12 @@
                             <constraint firstItem="FgX-dI-Ktx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S9t-yh-8OR"/>
                             <constraint firstItem="yH9-jB-e8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gSJ-Kk-Xih"/>
                             <constraint firstItem="FgX-dI-Ktx" firstAttribute="top" secondItem="yH9-jB-e8C" secondAttribute="bottom" constant="16" id="ihG-2U-tSB"/>
+                            <constraint firstItem="Sk8-p8-7Rl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oe6-MC-sJA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="progressLabel" destination="Sk8-p8-7Rl" id="nfg-GY-NW2"/>
                         <outlet property="videoPreview" destination="yH9-jB-e8C" id="a31-6C-zE6"/>
                     </connections>
                 </viewController>

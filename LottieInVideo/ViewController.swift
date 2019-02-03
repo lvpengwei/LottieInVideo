@@ -14,6 +14,7 @@ import Lottie
 
 class ViewController: UIViewController {
     @IBOutlet weak var videoPreview: VideoPreview!
+    @IBOutlet weak var progressLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVideo()
@@ -31,11 +32,15 @@ class ViewController: UIViewController {
     }
     private var sticker: Sticker?
     private func setupSticker() {
+        if let sticker = self.sticker {
+            videoPreview.removeSticker(sticker: sticker)
+        }
         guard let stickerPath = Bundle.main.path(forResource: "drinks", ofType: "json") else { return }
+        let start = videoPreview.player.fl_currentTime()
+        let duration = min(CMTime(seconds: 3, preferredTimescale: 600), videoPreview.player.itemDuration - start)
         let sticker = Sticker()
         sticker.url = stickerPath
-        sticker.range = CMTimeRange(start: CMTime(seconds: 1, preferredTimescale: 600), duration: CMTime(seconds: 3, preferredTimescale: 600))
-        sticker.speed = 1
+        sticker.range = CMTimeRange(start: start, duration: duration)
         videoPreview.addSticker(sticker: sticker)
         self.sticker = sticker
     }
@@ -53,8 +58,10 @@ class ViewController: UIViewController {
         exportSession?.outputUrl = outputURL
         exportSession?.outputFileType = AVFileType.mp4.rawValue
         
+        progressLabel.isHidden = false
         exportSession?.exportAsynchronously(completionHandler: { [weak self] in
             guard let s = self else { return }
+            s.progressLabel.isHidden = true
             if let err = s.exportSession?.error {
                 print(err.localizedDescription)
             } else {
@@ -136,6 +143,9 @@ class ViewController: UIViewController {
 extension ViewController: SCAssetExportSessionDelegate {
     func assetExportSessionDidProgress(_ assetExportSession: SCAssetExportSession) {
         print("progress: \(assetExportSession.progress)")
+        DispatchQueue.main.async {
+            self.progressLabel.text = "\(assetExportSession.progress.format(f: ".2"))"
+        }
     }
 }
 

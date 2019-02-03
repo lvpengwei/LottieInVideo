@@ -19,7 +19,7 @@ class VideoPreview: UIView {
         return scFilterImageView
     }
     private weak var scFilterImageView: SCFilterImageView!
-    private let player = SCPlayer()
+    let player = SCPlayer()
     private let playButton = UIButton()
     private let slider = ResizableSlider.editorSlider()
     private let leftTimeLabel = UILabel()
@@ -169,6 +169,14 @@ class VideoPreview: UIView {
         stickerWrapView.addSubview(stickerView)
         if let syncLayer = stickerView.stickerLayer as? AVSynchronizedLayer {
             syncLayer.playerItem = player.currentItem
+        }
+    }
+    func removeSticker(sticker: Sticker) {
+        let subviews = stickerWrapView.subviews
+        for view in subviews {
+            guard let stickerView = view as? StickerView else { continue }
+            guard stickerView.sticker === sticker else { continue }
+            stickerView.removeFromSuperview()
         }
     }
     deinit {
