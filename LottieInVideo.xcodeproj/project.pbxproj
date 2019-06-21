@@ -268,7 +268,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AVPlayerSeeker/AVPlayerSeeker.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -293,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottieInVideo/Pods-LottieInVideo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A83FBC3423F670680EF54204 /* [CP] Check Pods Manifest.lock */ = {

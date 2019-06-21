@@ -1,6 +1,6 @@
 PODS:
   - AVPlayerSeeker (1.1)
-  - lottie-ios (2.5.2)
+  - lottie-ios (3.1.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -12,7 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AVPlayerSeeker (from `https://github.com/lvpengwei/AVPlayerSeeker.git`, commit `31381b0249d0d9a3dbae3a2c893fb132561547e7`)
-  - lottie-ios (from `https://github.com/lvpengwei/lottie-ios.git`, commit `7fc43f46635767fc6840c215313f08e7481ccb7f`)
+  - lottie-ios (from `https://github.com/lvpengwei/lottie-ios.git`, commit `daf49528ae6ad235a4edfae68964c22256183422`)
   - RxCocoa (~> 4.4.0)
   - SCRecorder (from `https://github.com/lvpengwei/SCRecorder.git`, commit `f507fcc38228e14d1c2d970f559548742cbf13a6`)
   - SnapKit (~> 4.2.0)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
     :git: https://github.com/lvpengwei/AVPlayerSeeker.git
   lottie-ios:
-    :commit: 7fc43f46635767fc6840c215313f08e7481ccb7f
+    :commit: daf49528ae6ad235a4edfae68964c22256183422
     :git: https://github.com/lvpengwei/lottie-ios.git
   SCRecorder:
     :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
@@ -42,7 +42,7 @@ CHECKOUT OPTIONS:
     :commit: 31381b0249d0d9a3dbae3a2c893fb132561547e7
     :git: https://github.com/lvpengwei/AVPlayerSeeker.git
   lottie-ios:
-    :commit: 7fc43f46635767fc6840c215313f08e7481ccb7f
+    :commit: daf49528ae6ad235a4edfae68964c22256183422
     :git: https://github.com/lvpengwei/lottie-ios.git
   SCRecorder:
     :commit: f507fcc38228e14d1c2d970f559548742cbf13a6
@@ -50,7 +50,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AVPlayerSeeker: 97a9f1d66c8c46d5889936033b3e88de06d45c54
-  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  lottie-ios: 106cd6f0067e38434143cf89fe40a29847f90017
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
@@ -58,6 +58,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
 
-PODFILE CHECKSUM: 0290a1d636e7f14836e1263277bb13aa2b49ff93
+PODFILE CHECKSUM: b02a6ccc9d45c0cf0dbede7ab9b1784aaf39d214
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

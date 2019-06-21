@@ -9,7 +9,7 @@ def ui
 end
 
 def video
-    pod 'lottie-ios', :git => 'https://github.com/lvpengwei/lottie-ios.git', :commit => '7fc43f46635767fc6840c215313f08e7481ccb7f'
+    pod 'lottie-ios', :git => 'https://github.com/lvpengwei/lottie-ios.git', :commit => 'daf49528ae6ad235a4edfae68964c22256183422'
     pod 'AVPlayerSeeker', :git => 'https://github.com/lvpengwei/AVPlayerSeeker.git', :commit => '31381b0249d0d9a3dbae3a2c893fb132561547e7'
     pod 'SCRecorder', :git => 'https://github.com/lvpengwei/SCRecorder.git', :commit => 'f507fcc38228e14d1c2d970f559548742cbf13a6'
 end

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Lottie
 import AVFoundation
 
 private func CGRectGetCenter(rect: CGRect) -> CGPoint {
@@ -177,15 +176,7 @@ class StickerView: StickerWrapView, UIGestureRecognizerDelegate {
         self.sticker = sticker
         self.timeOffset = timeOffset
         var stickerJSON: [ String: Any ] = [:]
-        do {
-            let animationData = try Data(contentsOf: URL(fileURLWithPath: sticker.url))
-            if let animationJSON = try JSONSerialization.jsonObject(with: animationData, options: JSONSerialization.ReadingOptions(rawValue: UInt(0))) as? Dictionary<String, Any> {
-                stickerJSON = animationJSON
-            }
-        } catch let e {
-            print(e)
-        }
-        let animationLayer = CALayer.animation(fromJSON: stickerJSON, loop: false)
+        let animationLayer = CALayer.animation(withPath: sticker.url)
         sticker.compSize = animationLayer.compSize()
         let stickerLayer = StickerLayer.init(animationLayer: animationLayer)
         

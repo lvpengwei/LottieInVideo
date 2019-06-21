@@ -121,24 +121,17 @@ class ViewController: UIViewController {
         guard let sticker = sticker else { return nil }
         let layer = StickerContainerLayer()
         layer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        do {
-            let animationData = try Data(contentsOf: URL(fileURLWithPath: sticker.url))
-            if let animationJSON = try JSONSerialization.jsonObject(with: animationData, options: JSONSerialization.ReadingOptions(rawValue: UInt(0))) as? Dictionary<String, Any> {
-                let animationLayer = CALayer.animation(fromJSON: animationJSON, loop: false)
-                let bounds = sticker.bounds(containerBounds: layer.bounds)
-                let scale = bounds.width / animationLayer.bounds.width
-                var transform = CGAffineTransform.init(scaleX: scale, y: scale)
-                transform = sticker.transform.concatenating(transform)
-                animationLayer.setAffineTransform(transform)
-                animationLayer.position = sticker.center(containerBounds: layer.bounds)
-                animationLayer.beginTime = sticker.range.start.seconds
-                animationLayer.duration = sticker.range.duration.seconds
-                animationLayer.speed = sticker.speed
-                layer.addSublayer(animationLayer)
-            }
-        } catch let e {
-            print(e)
-        }
+        let animationLayer = CALayer.animation(withPath: sticker.url)
+        let bounds = sticker.bounds(containerBounds: layer.bounds)
+        let scale = bounds.width / animationLayer.bounds.width
+        var transform = CGAffineTransform.init(scaleX: scale, y: scale)
+        transform = sticker.transform.concatenating(transform)
+        animationLayer.setAffineTransform(transform)
+        animationLayer.position = sticker.center(containerBounds: layer.bounds)
+        animationLayer.beginTime = sticker.range.start.seconds
+        animationLayer.duration = sticker.range.duration.seconds
+        animationLayer.speed = sticker.speed
+        layer.addSublayer(animationLayer)
         return layer
     }
 }
@@ -163,9 +156,7 @@ extension StickerContainerLayer: ImageProvider {
             if (timeRange.containsTime(time)) {
                 sublayer.isHidden = false
                 let progress = (time - beginTime).seconds / duration.seconds
-                if let sublayer = sublayer as? LOTAnimationLayer {
-                    sublayer.display(withProgress: CGFloat(progress))
-                }
+                sublayer.display(with: CGFloat(progress))
             } else {
                 sublayer.isHidden = true
             }
