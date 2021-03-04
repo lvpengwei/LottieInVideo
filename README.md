@@ -3,7 +3,7 @@ Render Lottie in video by AVFoundation
 
 ### PAG vs Lottie
 渲染矢量动画到视频里面，[PAG](https://pag.io)更适合做这件事。  
-Rendering venctor animation in video, [PAG](https://pag.io) is best for this job than lottie.
+Rendering vector animation in video, [PAG](https://pag.io) is best for this job than lottie.
 
 ### Lottie 3.1.0
 分支 master 使用的 Lottie 版本
